@@ -32,7 +32,7 @@ export default function Header() {
   const navigate = useNavigate()
   const iconTitle = createMemo(() => splitEmoji(store.sessionSettings.title))
   return (
-    <>
+    < >
       <div
         id="logo"
         class="pl-1em cursor-pointer inline-block"
@@ -58,6 +58,8 @@ export default function Header() {
           <Show
             when={iconTitle().title}
             fallback={
+                <>
+              </>
             }
           >
             <span class="ml-1 font-extrabold text-slate-7 dark:text-slate">
